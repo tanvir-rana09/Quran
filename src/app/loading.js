@@ -1,8 +1,8 @@
 
 
-const loading = () => {
+const loading = ({ className = 'h-screen' }) => {
   return (
-	<div>loading...</div>
+    <div className={`w-full ${className} flex justify-center items-center uppercase tracking-widest`}>LOADING...</div>
   )
 }
 

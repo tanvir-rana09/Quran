@@ -1,11 +1,17 @@
-import { Amiri, Lateef, Sen, Bebas_Neue, Solitreo } from "next/font/google";
+import { Amiri, Lateef, Sen, Bebas_Neue, Solitreo,Cinzel } from "next/font/google";
 import "./globals.css";
-
+import { StoreProviders } from "./providers";
 
 // Fonts From Google Fonts
 const sen = Sen({
   subsets: ["latin"],
   variable: '--font-sen',
+  weight: '400',
+  display: 'swap'
+});
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: '--font-cinzel',
   weight: '400',
   display: 'swap'
 });
@@ -36,14 +42,20 @@ const lateef = Lateef({
 })
 
 export const metadata = {
-  title: "Quran",
+  title: {
+    template: 'Quran | %s',
+    default: 'Quran',
+  },
   description: "The Holy Quran",
 };
 
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${solitreo.variable} ${bebas_neue.variable} ${sen.variable} ${amiri.variable} ${lateef.variable}`}>
-      <body >{children}</body>
+    <html lang="en" className={`${solitreo.variable} ${bebas_neue.variable} ${sen.variable} ${amiri.variable} ${lateef.variable} ${cinzel.variable}`}>
+      <body className="font-sen">
+        <StoreProviders>{children}</StoreProviders>
+      </body>
     </html>
   );
 }

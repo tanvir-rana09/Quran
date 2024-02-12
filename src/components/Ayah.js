@@ -1,0 +1,23 @@
+import fethcQuran from '@/utils/fetchAll'
+import Link from 'next/link';
+import React from 'react'
+
+const Ayah = async ({ id }) => {
+	const ayahs = await fethcQuran(`chapters/${id}`)
+	const { chapter } = await ayahs
+	const arr = []
+	for (let i = 1; i <= chapter?.verses_count; i++) {
+		arr.push(i)
+	}
+	return (
+		<div className='flex flex-col h-[55rem] overflow-scroll'>
+			{
+				arr.map((ayah) => (
+					<Link href={`#ayah${ayah}`} className={`flex gap-2 px-2.5 py-1.5 hover:bg-gray-100`} key={ayah}>{ayah}</Link>
+				))
+			}
+		</div>
+	)
+}
+
+export default Ayah
