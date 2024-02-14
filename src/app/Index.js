@@ -6,7 +6,7 @@ import Hero from './../components/Hero';
 import Juzs from './../components/Juzs';
 import { Quran } from '@/components/Quran';
 import Loading from './../components/Loading';
-import { Sidebar } from '@/components/Sidebar';
+import Sidebar from '@/components/Sidebar';
 import SidebarJuzs from './../components/SidebarJuzs';
 import SidebarPages from './../components/SidebarPages';
 import SidebarSurahs from './../components/SidebarSurahs';

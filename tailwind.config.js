@@ -16,6 +16,7 @@ module.exports = {
         sen:['var(--font-sen)',...fontFamily.sans],
         bebas:['var(--font-bebas-neue)',...fontFamily.sans],
         cinzel:['var(--font-cinzel)',...fontFamily.sans],
+        tiro:['var(--font-tiro-bangla)',...fontFamily.sans],
       },
       colors: {
         primary: '#E3C1B4', 

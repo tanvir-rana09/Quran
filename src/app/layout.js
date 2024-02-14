@@ -1,4 +1,4 @@
-import { Amiri, Lateef, Sen, Bebas_Neue, Solitreo,Cinzel } from "next/font/google";
+import { Amiri, Lateef, Sen, Bebas_Neue, Solitreo,Cinzel,Tiro_Bangla } from "next/font/google";
 import "./globals.css";
 import { StoreProviders } from "./providers";
 
@@ -6,6 +6,13 @@ import { StoreProviders } from "./providers";
 const sen = Sen({
   subsets: ["latin"],
   variable: '--font-sen',
+  weight: '400',
+  display: 'swap'
+});
+
+const tiro = Tiro_Bangla({
+  subsets: ["bengali"],
+  variable: '--font-tiro-bangla',
   weight: '400',
   display: 'swap'
 });
@@ -50,11 +57,16 @@ export const metadata = {
 };
 
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children,sidebar }) {
   return (
-    <html lang="en" className={`${solitreo.variable} ${bebas_neue.variable} ${sen.variable} ${amiri.variable} ${lateef.variable} ${cinzel.variable}`}>
+    <html lang="en" className={`${solitreo.variable} ${bebas_neue.variable} ${sen.variable} ${amiri.variable} ${lateef.variable} ${cinzel.variable} ${tiro.variable}`}>
       <body className="font-sen">
-        <StoreProviders>{children}</StoreProviders>
+        <StoreProviders>
+          <main>
+            <div>{sidebar}</div>
+            <div>{children}</div>
+          </main>
+        </StoreProviders>
       </body>
     </html>
   );

@@ -16,11 +16,11 @@ export async function generateMetadata({ params }) {
 const page = ({ params }) => {
   const { id } = params;
   return (
-    <div className="flex">
-      <div className="w-[18rem] bg-white h-screen fixed">
+    <div className="flex justify-between w-full h-screen overflow-hidden">
+      <div className="z-10">
         <Sidebar id={id} />
       </div>
-      <div className="w-full">
+      <div className="w-full overflow-scroll h-screen">
         <Suspense fallback={<Loading />}>
           <Aside id={id} />
         </Suspense>

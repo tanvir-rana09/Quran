@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 const SidebarJuzs = async ({ data }) => {
@@ -13,7 +14,7 @@ const SidebarJuzs = async ({ data }) => {
 				<div className='flex flex-col px-3 py-2 h-[55rem] overflow-scroll'>
 					{
 						juzs.juzs.map((juz) => (
-							<p className='hover:bg-gray-100 px-4 py-2 cursor-pointer' key={juz.id}>Juz {juz.id}</p>
+							<Link href={`juz/${juz.id}`} className='hover:bg-gray-100 px-4 py-2 cursor-pointer' key={juz.id}>Juz {juz.id}</Link>
 						))
 					}
 					

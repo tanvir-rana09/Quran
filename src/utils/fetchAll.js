@@ -7,9 +7,9 @@ const fethcQuran = async (endpoint) => {
 		cache:'force-cache'
 	});
 
-	if (!response.ok) {
-		throw new Error
-	}
+	// if (!response.ok) {
+	// 	throw new Error
+	// }
 	return await response.json();
 }
 

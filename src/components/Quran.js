@@ -1,24 +1,15 @@
 'use client'
 import React, { Suspense, useEffect, useState } from 'react'
 import Loading from './Loading';
-import Card from './Card';
-import Surah from './Surah';
+import fethcQuran from '@/utils/fetchAll';
+import Juzs from './Juzs';
+import Surahs from './Surahs';
 
 const Quran = () => {
-	const [data, setData] = useState([])
 	const [quran, setQuran] = useState('chapters')
 
-	useEffect(() => {
-		const LastTry = async () => {
-			const response = await fetch(`https://api.quran.com/api/v4/${quran}`, {
-				cache: 'force-cache'
-			});
-			const results = await response.json()
-			setData(results)
-
-		}
-		LastTry()
-	}, [quran])
+	const juzs = fethcQuran(`juzs`)
+	const chapters = fethcQuran(`chapters`)
 	return (
 		<div className='bg-third/50'>
 			<div className='flex mx-2 md:mx-5 2xl:mx-[15%] mb-5 pt-5 border-gray-300 border-b'>
@@ -26,26 +17,13 @@ const Quran = () => {
 				<button onClick={() => setQuran('juzs')} className={`text-xl px-5 k py-0.5 hover:bg-third ${quran === 'juzs' ? 'border-b-2 border-black' : null}`} >Juz</button>
 			</div>
 
-			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:px-5 px-2 '>
+			<div className=''>
 				<Suspense fallback={<Loading className={'h-[50vh]'} />} >
 					{
-						quran === 'chapters' && data?.chapters?.map((data) => (
-							<Card key={data.id} name={data.name_simple} id={data.id} arabic={data.name_arabic} ayahs={data.verses_count} newName={data.translated_name.name} place={data.revelation_place} />
-						))
+						quran === 'chapters' && <Surahs surahs={chapters}/>
 					}
 					{
-						quran === 'juzs' && data?.juzs?.map((data) => (
-							<div
-								className='bg-third '
-								key={data.id}>
-								<p className='pl-3 py-0.5'>Juz {data.id}</p>
-								<div className='flex flex-col '>
-									{Object.keys(data.verse_mapping).map(key => (
-										<Surah key={key} id={key} />
-									))}
-								</div>
-							</div>
-						))
+						quran === 'juzs' && <Juzs juzs ={juzs}/>
 					}
 				</Suspense>
 			</div>
