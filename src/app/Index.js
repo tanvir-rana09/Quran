@@ -1,7 +1,5 @@
 import Names from './../components/Names';
 import Card from './../components/Card';
-import Button from './../components/Button';
-import Heading from './../components/Heading';
 import Hero from './../components/Hero';
 import Juzs from './../components/Juzs';
 import Quran from '@/components/Quran';
@@ -19,8 +17,6 @@ import SingleAyahCard from './../components/SingleAyahCard';
 export {
 	Names,
 	Card, 
-	Button,
-	Heading,
 	Hero,
 	Juzs,
 	Quran,

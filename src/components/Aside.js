@@ -12,7 +12,7 @@ const Aside = async ({ id }) => {
 	const banglaAyah = []
 	const surah = await fetchQuranCom(`surah/${id}/ar.alafasy`)
 	const bangla = await fetchQuranCom(`surah/${id}/bn.bengali`)
-	const audio = await fetchQuran(`chapter_recitations/${id}/${id}`)
+	const audio = await fetchQuran(`chapter_recitations/2/${id}`)
 	const {audio_file} =audio
 	const { data } = surah
 

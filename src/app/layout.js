@@ -1,6 +1,7 @@
 import { Amiri, Lateef, Sen, Bebas_Neue, Solitreo,Cinzel,Tiro_Bangla } from "next/font/google";
 import "./globals.css";
 import { StoreProviders } from "./providers";
+import Footer from "@/components/Footer";
 
 // Fonts From Google Fonts
 const sen = Sen({
@@ -63,8 +64,8 @@ export default function RootLayout({ children,sidebar }) {
       <body className="font-sen">
         <StoreProviders>
           <main>
-            <div>{sidebar}</div>
             <div>{children}</div>
+            <div><Footer/></div>
           </main>
         </StoreProviders>
       </body>
