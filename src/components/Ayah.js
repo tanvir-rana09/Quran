@@ -5,8 +5,9 @@ import React from 'react'
 const Ayah = async ({ id, ayat }) => {
 	const ayahs = await fethcQuran(`chapters/${id}`)
 	const { chapter } = await ayahs
+	const lengths = chapter?.verses_count
 	const arr = []
-	for (let i = 1; i <= chapter.verses_count; i++) {
+	for (let i = 1; i <= lengths; i++) {
 		arr.push(i)
 	}
 	console.log(ayat)

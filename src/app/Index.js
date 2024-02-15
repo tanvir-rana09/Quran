@@ -4,7 +4,7 @@ import Button from './../components/Button';
 import Heading from './../components/Heading';
 import Hero from './../components/Hero';
 import Juzs from './../components/Juzs';
-import { Quran } from '@/components/Quran';
+import Quran from '@/components/Quran';
 import Loading from './../components/Loading';
 import Sidebar from '@/components/Sidebar';
 import SidebarJuzs from './../components/SidebarJuzs';
@@ -18,7 +18,7 @@ import SingleAyahCard from './../components/SingleAyahCard';
 
 export {
 	Names,
-	Card,
+	Card, 
 	Button,
 	Heading,
 	Hero,

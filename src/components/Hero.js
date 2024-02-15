@@ -3,6 +3,7 @@ import React from 'react'
 import banner from '../Images/quran (1).jpg'
 import logo from '../Images/quran (3).png'
 import text from '../Images/pngwing.com (2).png'
+import Input from '@/components/Input'
 const Hero = () => {
 
 	return (
@@ -16,11 +17,8 @@ const Hero = () => {
 						<Image className='w-full h-full object-cover' src={logo} alt='logo' quality={100} />
 						<h1 className='font-cinzel font-semibold tracking-wider md:text-xl'>QURAN.COM</h1>
 					</div>
-					<div className='flex items-center w-[65%] justify-between overflow-hidden  bg-white'>
-						<input
-							className='bg-transparent outline-none w-full md:pl-7 pl-1 py-1 md:py-3'
-							type="text" name="" id="" placeholder='Search...' />
-						<button className='bg-[#2CA4AB] md:px-7 px-2 py-1 md:py-3 text-white'>Search</button>
+					<div className='sm:w-[30rem] md:w-[35rem] lg:w-[40rem]'>
+						<Input />
 					</div>
 				</div>
 				<div className='flex absolute top-20 md:left-20 md:top-60 left-0 sm:left-10 sm:top-32 flex-col justify-center items-center text-xl text-five 2xl:px-[15%]'>
