@@ -16,7 +16,7 @@ export async function generateMetadata({ params }) {
 const page = ({ params }) => {
   const { id } = params;
   return (
-    <div className="flex justify-between w-full h-screen overflow-hidden ">
+    <div className="flex justify-between w-full h-screen overflow-hidden max-w-7xl mx-auto">
       <div className="z-10">
         <Sidebar id={id} />
       </div>

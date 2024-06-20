@@ -11,8 +11,8 @@ const Quran = () => {
 	const juzs = fethcQuran(`juzs`)
 	const chapters = fethcQuran(`chapters`)
 	return (
-		<div className='bg-third/50'>
-			<div className='flex mx-2 md:mx-5 2xl:mx-[15%] mb-5 pt-5 border-gray-300 border-b'>
+		<div className='bg-third/50 max-w-7xl mx-auto'>
+			<div className='flex mx-2 md:mx-5 mb-5 pt-5 border-gray-300 border-b'>
 				<button onClick={() => setQuran(!quran)} className={`text-xl px-5 py-0.5 hover:bg-third ${quran? 'border-b-2 border-black' : null}`} >Surah</button>
 				<button onClick={() => setQuran(!quran)} className={`text-xl px-5 k py-0.5 hover:bg-third ${!quran ? 'border-b-2 border-black' : null}`} >Juz</button>
 			</div>

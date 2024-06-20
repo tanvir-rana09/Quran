@@ -29,7 +29,7 @@ const Aside = async ({ id }) => {
 					<h1 className='font-cinzel font-semibold tracking-wider md:text-xl'>QURAN.COM</h1>
 				</Link>
 				<div className='flex items-center sm:gap-2'>
-				<div className=''><Allaudio audio={audio_file.audio_url}/></div>
+				<div className=''><Allaudio audio={audio_file?.audio_url}/></div>
 				<p className='z-30'><span className='font-semibold '>{data.englishName}</span>-{data.englishNameTranslation}</p>
 				</div>
 			</div>

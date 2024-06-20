@@ -28,7 +28,7 @@ const Sidebar = ({ id = null }) => {
   //   // router.push(`/page/1`)
   // }
   return (
-    <div className={` bg-white top-0 left-0 h-screen overflow-hidden transition ease-in-out duration-500 flex items-start mt-14 pt-2`}>
+    <div className={` bg-white top-0 left-0 h-screen overflow-hidden transition ease-in-out duration-500 flex items-start mt-14 pt-2  border`}>
       <div className={`h-screen border-r border-third w-[18rem] ${sidebar ? 'block' : 'hidden'}`} >
         <div className='flex bg-third justify-evenly py-3'>
           <button className={`${category === 'chapters' ? 'bg-white shadow-md' : 'hover:bg-gray-200'}  rounded-full duration-300 px-5 py-1.5 `} onClick={chapters}>Surah</button>

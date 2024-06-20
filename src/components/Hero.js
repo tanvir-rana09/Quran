@@ -8,7 +8,7 @@ const Hero = () => {
 
 	return (
 		<div>
-			<div className='relative'>
+			<div className='relative' >
 				<div className='flex md:pt-16 pt-10 h-[35rem]'>
 					<Image className='w-full h-full object-cover' priority src={banner} alt="The Holy Book" />
 				</div>
