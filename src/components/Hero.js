@@ -25,7 +25,7 @@ const Hero = () => {
 					<div className='w-20 '>
 						<Image src={text} alt='' />
 					</div>
-					<h1 className='font-cinzel font-semibold text-sm md:text-lg'>The Holy Quran</h1>
+					<h1 className='font-cinzel font-semibold text-sm md:text-lg'>The Holy Quran Made by Tanvir</h1>
 					<p className='w-72 text-center text-xs md:text-sm'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga quia nostrum explicabo perspiciatis corporis non quos sint rem, sapiente quis?</p>
 				</div>
 			</div>
